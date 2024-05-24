@@ -17,7 +17,8 @@ function App() {
     } else {
       setPlayer("X");
     }
-  }, [board]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [board]);//<-- this useEffect is called only when board changes
 
   useEffect(() => {
     if(results.state != "none") {
